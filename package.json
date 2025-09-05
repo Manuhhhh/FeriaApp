@@ -1,0 +1,46 @@
+{
+  "name": "vite-with-back-blank-proyect",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm:dev:front\" \"npm:dev:back\"",
+    "dev:front": "vite",
+    "dev:back": "tsx ./server.ts",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^11.0.2",
+    "@trpc/client": "^11.5.0",
+    "@trpc/server": "^11.5.0",
+    "bcrypt": "^6.0.0",
+    "concurrently": "^9.2.1",
+    "dotenv": "^17.2.2",
+    "fastify": "^5.6.0",
+    "jose": "^6.1.0",
+    "kysely": "^0.28.5",
+    "pg-pool": "^3.10.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "superjson": "^2.2.2",
+    "url": "^0.11.4",
+    "zod": "^4.1.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.33.0",
+    "@types/bcrypt": "^6.0.0",
+    "@types/pg-pool": "^2.0.6",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react-swc": "^4.0.0",
+    "eslint": "^9.33.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.39.1",
+    "vite": "^7.1.2"
+  }
+}
