@@ -4,12 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"npm:dev:front\" \"npm:dev:back\"",
+    "dev": "concurrently \"pnpm:dev:front\" \"pnpm:dev:back\"",
     "dev:front": "vite",
     "dev:back": "tsx ./server.ts",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "concurrently \"pnpm:preview\" \"pnpm:dev:back\""
   },
   "dependencies": {
     "@fastify/cookie": "^11.0.2",
@@ -39,6 +40,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
+    "tsx": "^4.20.5",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.39.1",
     "vite": "^7.1.2"
